@@ -17,7 +17,14 @@ To run the application locally, you'll need to follow these steps:
    Unix-based systems) or `venv\Scripts\activate` (on Windows) in your terminal.
 5. Install the required dependencies by running
    `pip install -r requirements.txt` in your terminal.
-6. Run the command `python app.py` in your terminal.
+6. Run the following commands in your terminal:
+
+   ```bash
+   export FLASK_APP=github_user_app
+   export FLASK_ENV=development
+   flask run
+   ```
+
 7. Open your web browser and go to `http://localhost:5000/` to view the
    application.
 
