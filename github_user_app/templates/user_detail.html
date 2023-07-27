@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}User Detail{% endblock %}
+
+{% block content %}
+    <h1>{{ handle }}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Repository</th>
+                <th>Contributions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for repo in repos %}
+                <tr>
+                    <td>{{ repo.repo_name }}</td>
+                    <td>{{ repo.contributions }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

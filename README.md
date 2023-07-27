@@ -22,7 +22,7 @@ To run the application locally, you'll need to follow these steps:
    ```bash
    export FLASK_APP=github_user_app
    export FLASK_ENV=development
-   flask run
+   flask run --debug
    ```
 
 7. Open your web browser and go to `http://localhost:5000/` to view the
