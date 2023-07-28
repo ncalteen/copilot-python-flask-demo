@@ -7,8 +7,11 @@ and display them in a list.
 
 When initially creating the app, I used GitHub Copilot to generate the majority
 of the code, with only minor manual tweaks (e.g. removing suggested columns,
-changing function names, etc.). There are some challenge steps listed below that
-you can try out to see how GitHub Copilot works!
+changing function names, etc.). You can see the full conversation log in
+[`conversation.md`](conversation.md).
+
+There are some challenge steps listed below that you can try out to see how
+GitHub Copilot works!
 
 ## Challenges
 
