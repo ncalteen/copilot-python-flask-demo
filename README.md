@@ -5,6 +5,11 @@ simple Python/Flask application that uses the
 [GitHub API](https://docs.github.com/en/rest) to retrieve a user's repositories
 and display them in a list.
 
+When initially creating the app, I used GitHub Copilot to generate the majority
+of the code, with only minor manual tweaks (e.g. removing suggested columns,
+changing function names, etc.). There are some challenge steps listed below that
+you can try out to see how GitHub Copilot works!
+
 ## Challenges
 
 Using **only** GitHub Copilot, try to complete the following challenges:
@@ -25,19 +30,42 @@ Using **only** GitHub Copilot, try to complete the following challenges:
 > **Note:** You will need to set the GITHUB_TOKEN environment variable to a
 > valid personal access token PAT in order to run the application locally. For
 > instructions, see
-> [Creating a personal access token (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
+> [Creating a personal access token (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
+>
+> The token will need `public_repo` scope in order to retrieve public
+> repositories.
 
 To run the application locally, you'll need to follow these steps:
 
 1. Clone this repository to your local machine.
 1. Navigate to the root directory of the repository.
-1. Create a new virtual environment by running `python -m venv venv` in your
-   terminal.
-1. Activate the virtual environment by running `source venv/bin/activate` (on
-   Unix-based systems) or `venv\Scripts\activate` (on Windows) in your terminal.
-1. Install the required dependencies by running
-   `pip install -r requirements.txt` in your terminal.
-1. Run the following commands in your terminal:
+1. Create a new virtual environment:
+
+   ```bash
+   python -m venv venv
+   ```
+
+1. Activate the virtual environment:
+
+   Unix-based systems:
+
+   ```bash
+   source venv/bin/activate
+   ```
+
+   Windows:
+
+   ```cmd
+   venv\Scripts\activate
+   ```
+
+1. Install the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+1. Start the application:
 
    ```bash
    export FLASK_APP=github_user_app
@@ -48,9 +76,12 @@ To run the application locally, you'll need to follow these steps:
 1. Open your web browser and go to `http://localhost:5000/` to view the
    application.
 
-If everything is set up correctly, you should see a "Hello, World!" message
-displayed in your browser.
+   If everything is set up correctly, you should see a landing page.
 
-Note: If you encounter any issues running the application, make sure that you
-have all the necessary dependencies installed, that you're running the correct
-version of Python, and that your virtual environment is activated.
+   To search for a specific user's repositories, navigate to
+   `http://localhost:5000/users/<handle>`, e.g.
+   `http://localhost:5000/users/ncalteen`.
+
+> **Note:** If you encounter any issues running the application, make sure that
+> you have all the necessary dependencies installed, that you're running the
+> correct version of Python, and that your virtual environment is activated.
